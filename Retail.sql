@@ -10,17 +10,15 @@
 # 2. Change into directory
 # cd data-science-db
 
-# 3. Pull the latest PostgreSQL image
-# docker pull postgres
+# 3. Pull the latest MySQL image
+# docker pull mysql
 
-# 4. Run the PostgreSQL container with a password
-# docker run --name markdownSQL-postgres -e POSTGRES_PASSWORD=secret -d postgres
+# 4. Run the MySQL container with a password
+# docker run --name markdownSQL-mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=retail_db -d mysql
 
-# 5. Create a new PostgreSQL database inside  container
-# docker exec -u postgres markdownSQL-postgres createdb postgres_db
+# 5. Connect to database using MySQL client
+# docker exec -it markdownSQL-mysql mysql -u root -psecret retail_db
 
-# 6. Connect to database using psql
-# docker exec -it markdownSQL-postgres psql -U postgres -d postgres_db
 
 
 
