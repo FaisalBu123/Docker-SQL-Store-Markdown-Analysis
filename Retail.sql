@@ -14,13 +14,13 @@
 # docker pull postgres
 
 # 4. Run the PostgreSQL container with a password
-# docker run --name salesSQL-postgres -e POSTGRES_PASSWORD=secret -d postgres
+# docker run --name markdownSQL-postgres -e POSTGRES_PASSWORD=secret -d postgres
 
 # 5. Create a new PostgreSQL database inside  container
-# docker exec -u postgres salesSQL-postgres createdb postgres_db
+# docker exec -u postgres markdownSQL-postgres createdb postgres_db
 
 # 6. Connect to database using psql
-# docker exec -it salesSQL-postgres psql -U postgres -d postgres_db
+# docker exec -it markdownSQL-postgres psql -U postgres -d postgres_db
 
 
 
