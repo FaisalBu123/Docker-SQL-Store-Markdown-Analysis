@@ -2,6 +2,26 @@
 # This contains historical data from 45 stores 
 # I will only analyse one of the csv files('Features data set') that I find the most interesting
 # the other 2 can be done later on especially for the modelling part which could be done using Python as will be explained later on
+# The docker instructions I used:
+	
+# 1. Make a new directory 
+# mkdir data-science-db
+	
+# 2. Change into directory
+# cd data-science-db
+
+# 3. Pull the latest PostgreSQL image
+# docker pull postgres
+
+# 4. Run the PostgreSQL container with a password
+# docker run --name salesSQL-postgres -e POSTGRES_PASSWORD=secret -d postgres
+
+# 5. Create a new PostgreSQL database inside  container
+# docker exec -u postgres salesSQL-postgres createdb postgres_db
+
+# 6. Connect to database using psql
+# docker exec -it salesSQL-postgres psql -U postgres -d postgres_db
+
 
 
 SELECT * 
